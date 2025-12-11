@@ -1,43 +1,273 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Personal Website</title>
-  </head>
-  <body>
-    <h1>My Name</h1>
-    <p>PhD Student</p>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#photography">Photography</a></li>
-      </ul>
-    </nav>
-    <section id="about">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumen Sikder Shuvo | Research & Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Soumen Sikder Shuvo</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#personal">Life</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Soumen Sikder Shuvo</h1>
+        <p class="tagline">
+          PhD student in Theoretical AI, exploring graph distance metrics, efficient neural networks, and the geometry of representation spaces.
+        </p>
+        <p class="hero-subtext">
+          I work at the intersection of <strong>graph theory</strong>, <strong>optimization</strong>, and <strong>large language models</strong>, 
+          with a focus on generalization and compression.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#research">View Research</a>
+          <a class="btn secondary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Research Snapshot</h2>
+        <ul>
+          <li>Developing efficient graph distance metrics for GNN generalization</li>
+          <li>Layer pruning & replacement for large language models</li>
+          <li>Optimization & Monte Carlo methods in ML</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
       <h2>About Me</h2>
-      <p>Write a short bio about yourself here.</p>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor's degree in XYZ, University of ABC</li>
-        <li>Master's degree in XYZ, University of ABC</li>
-        <li>Currently pursuing PhD in XYZ, University of ABC</li>
-      </ul>
-    </section>
-    <section id="research">
+      <div class="two-column">
+        <div>
+          <p>
+            I'm a PhD student in Theoretical AI with broad interests in 
+            <strong>representation learning</strong>, <strong>graph-structured data</strong>, and 
+            <strong>optimization for deep learning</strong>.
+          </p>
+          <p>
+            My current work looks at how we can understand and improve neural networks 
+            by studying the structure of their hidden representations, especially in 
+            graph neural networks (GNNs) and large language models (LLMs).
+          </p>
+        </div>
+        <div>
+          <p>
+            Outside research, I enjoy traveling to national parks, tinkering with 
+            multi-monitor setups, and occasionally cleaning my perpetually messy room 
+            full of devices.
+          </p>
+          <p>
+            You can find a selection of my projects, publications, and adventures below.
+          </p>
+          <!-- TODO: Update this with your actual CV link -->
+          <a class="btn small" href="#" target="_blank" rel="noopener">Download CV (coming soon)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section alt">
+    <div class="container">
       <h2>Research</h2>
-      <ul>
-        <li>Previous research project 1</li>
-        <li>Previous research project 2</li>
-        <li>Current research project 1</li>
-        <li>Current research project 2</li>
+      <p class="section-intro">
+        My research revolves around understanding and improving generalization in neural networks, 
+        with an emphasis on graphs and large-scale language models.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Graph Distance Metrics for GNN Generalization</h3>
+          <p class="meta">Thesis-level project</p>
+          <p>
+            Studying efficient, theoretically grounded distance metrics on graphs to better 
+            understand how GNNs generalize, and to design architectures tailored to these metrics.
+          </p>
+          <ul>
+            <li>Connected graph families & spectral properties</li>
+            <li>Links to message passing and expressivity</li>
+            <li>Potential applications in robustness and transfer</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Layer Redundancy in Large Language Models</h3>
+          <p class="meta">Ongoing</p>
+          <p>
+            Investigating redundant transformer layers via metrics on hidden representations 
+            (cosine similarity, KL divergence, Riemannian metrics like SpecMaps).
+          </p>
+          <ul>
+            <li>Layer pruning and lightweight replacement training</li>
+            <li>Experiments on LLaMA, OPT, and BERT models</li>
+            <li>Focus on preserving performance with fewer parameters</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Optimization & Monte Carlo Methods</h3>
+          <p class="meta">Course & side projects</p>
+          <p>
+            Work on hyperparameter optimization for neural networks and Monte Carlo simulation 
+            of the Black–Scholes equation, connecting stochastic processes to practical modeling.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Layer-wise Pruning Experiments for LLMs</h3>
+          <p class="meta">Code, experiments, and analysis</p>
+          <p>
+            Systematic removal and replacement of transformer layers in models like OPT and LLaMA, 
+            measuring the impact on downstream tasks (e.g., MNLI) and probing representation changes.
+          </p>
+          <!-- TODO: Add your actual GitHub link -->
+          <a href="#" target="_blank" rel="noopener">View on GitHub (coming soon)</a>
+        </article>
+
+        <article class="card">
+          <h3>Graph-based Analysis of Hidden State Embeddings</h3>
+          <p class="meta">Custom eigenvector pipeline</p>
+          <p>
+            Building graph structures over token embeddings from various LLMs and studying 
+            eigenvalues/eigenvectors to understand geometric and spectral properties of representations.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Hyperparameter Optimization for Neural Networks</h3>
+          <p class="meta">Graduate optimization project</p>
+          <p>
+            Benchmarking optimization strategies for tuning deep models, including methods inspired 
+            by vehicle routing and other combinatorial optimization frameworks.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>U-Net for Pneumothorax Segmentation</h3>
+          <p class="meta">Medical imaging</p>
+          <p>
+            Applied a U-Net-based model to the SIIM-ACR Pneumothorax Segmentation dataset, 
+            focusing on robust training and evaluation in a medical imaging context.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section alt">
+    <div class="container">
+      <h2>Publications & Preprints</h2>
+      <p>
+        This section is a placeholder for your papers. Add entries as your work gets published or uploaded to arXiv.
+      </p>
+      <ul class="pub-list">
+        <li>
+          <strong>[Coming soon]</strong> Efficient Graph Distance Metrics for GNN Generalization
+          <span class="pub-meta">— Drafting stage</span>
+        </li>
+        <li>
+          <strong>[Coming soon]</strong> Pruning Redundant Layers in Large Language Models via Representation Geometry
+          <span class="pub-meta">— In preparation</span>
+        </li>
       </ul>
-    </section>
-    <section id="photography">
-      <h2>Photography</h2>
-      <p>Add some of your personal photos and write a short description of them.</p>
-    </section>
-  </body>
+      <!-- TODO: Add Google Scholar link if you have one -->
+      <p>
+        <em>Once you have papers, link your Google Scholar profile here.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- Personal / Life -->
+  <section id="personal" class="section">
+    <div class="container">
+      <h2>Life Outside Research</h2>
+      <div class="two-column">
+        <div>
+          <h3>Travel & Nature</h3>
+          <p>
+            I love exploring national parks and scenic landscapes. Recent and planned trips include:
+          </p>
+          <ul>
+            <li>Glacier National Park</li>
+            <li>Yellowstone National Park</li>
+            <li>Colorado road trips (Pikes Peak, Garden of the Gods, and more)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Random Facts</h3>
+          <ul>
+            <li>Usually running on less sleep than recommended.</li>
+            <li>Desk setup: two laptops, four monitors, iPad, phone, and occasional pizza boxes.</li>
+            <li>Standard uniform: hoodie + shorts.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="section-intro">
+        The best way to reach me is by email. I'm also somewhat active on GitHub and LinkedIn.
+      </p>
+      <div class="contact-grid">
+        <div>
+          <!-- TODO: Replace with your real email -->
+          <p><strong>Email:</strong> <a href="mailto:your.email@domain.com">your.email@domain.com</a></p>
+          <!-- TODO: Replace links with real profiles -->
+          <p><strong>GitHub:</strong> <a href="https://github.com/your-username" target="_blank" rel="noopener">@your-username</a></p>
+          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">LinkedIn Profile</a></p>
+        </div>
+        <div>
+          <p>
+            If you're interested in collaborating, discussing research, or just talking about 
+            theoretical AI and representation learning, feel free to reach out.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Soumen Sikder Shuvo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
